@@ -182,7 +182,7 @@
             }
 
             const { error } = await db
-                .from('timbrature')
+                .from('Timbrature')
                 .insert([
                     { 
                         data: data, 
@@ -209,7 +209,7 @@
             const primoGiornoMese = new Date(dataOggi.getFullYear(), dataOggi.getMonth(), 1).toISOString().split('T')[0];
 
             const { data, error } = await db
-                .from('timbrature')
+                .from('Timbrature')
                 .select('*')
                 .gte('data', primoGiornoMese)
                 .order('data', { ascending: true });
